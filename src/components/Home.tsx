@@ -1,18 +1,22 @@
 import * as React from 'react';
 import {FunctionComponent, ReactElement, Fragment} from 'react';
+import {Link} from 'react-router-dom'
 
-const Home: FunctionComponent<{}> = (): ReactElement => (
-  <Fragment>
-    <div>Welcome to the ultimate react boilerplate from the futur!</div>
-    <ul>
-      <li>React</li>
-      <li>TypeScript</li>
-      <li>Parcel</li>
-      <li>React router</li>
-      <li>EsLint</li>
-      <li>Prettier</li>
-    </ul>
-  </Fragment>
-);
+const Home: FunctionComponent<{}> = (): ReactElement => {
+  return (
+    <Fragment>
+      <Link to="/employee">
+        <button>
+          Employee
+        </button>
+      </Link>
+      <Link to="/staff">
+        <button>
+          Staff
+        </button>
+      </Link>
+    </Fragment>
+  );
+} 
 
 export default Home;
